@@ -48,7 +48,7 @@ clc
 format long
 
 s = 0;
-for n=0 : 136120
+for n=0 : 1000
     s = s + (((-1)^n) / (2*n + 1));
 end
 minPi = s*4
