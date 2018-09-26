@@ -25,7 +25,7 @@ while d > 1e-5
 end
 minPi = s*4
 
-%% Uppgift 2b
+%% Uppgift 2a2
 % (misslyckat försök att räkna ut hur många iterationer för 5 korrekta decimaler)
 clc
 format long
@@ -64,6 +64,7 @@ if s(1) > 3
     x = [x; x(1)];
     y = [y; y(1)];
     fill(x,y,'g');
+    axis([0 1 0 1])
 else
     disp('Måste vara fler punkter än i en triangel!!!')
 end
