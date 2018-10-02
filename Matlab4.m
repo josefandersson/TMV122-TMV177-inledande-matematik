@@ -10,19 +10,21 @@ rektangelOmkrets = polylen(x, y)
 
 % för att räkna omkrets behöver startpunkten och slutpunkten vara den
 % samma, dvs första och sista värderna i x är samma och första och sista
-% värdet i y är samma.
+% värderna i y är samma.
 
-%% Uppgift 2a
+%% Uppgift 2a                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 clc
 format long
 
 s = 0; d = 1; n = 0;
-while d > 1e-5
+while d > 1e-6
     nys = s + (((-1)^n) / (2*n + 1));
-    d = abs(nys - s);
+    % d = abs(nys - s);
+    d = abs((pi/4) - nys);
     s = nys;
     n = n + 1;
 end
+s
 minPi = s*4
 
 %% Uppgift 2a2
@@ -48,7 +50,7 @@ clc
 format long
 
 s = 0;
-for n=0 : 1000
+for n=0 : 999
     s = s + (((-1)^n) / (2*n + 1));
 end
 minPi = s*4
@@ -57,7 +59,6 @@ minPi = s*4
 
 %% Uppgift 3
 clc
-clf
 [x,y] = ginput;
 s = size(x);
 if s(1) > 3
