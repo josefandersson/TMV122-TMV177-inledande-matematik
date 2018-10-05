@@ -13,9 +13,9 @@ ab = f(a)*f(b)
 m = (a+b)/2;
 
 if (f(a)*f(m) < 0)
-    b = m;
+    b = m
 else
-    a = m;
+    a = m
 end
 
 %% Uppgift 4
