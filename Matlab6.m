@@ -8,6 +8,7 @@ x = linspace(-2, 1);
 plot(x, f(x)), axis([-2 1 -1 1]), grid on, hold on
 
 [xi, yi] = ginput;
+disp(xi)
 for i = 1 : size(yi)
     x = min_newton(f, Df, xi(i), 1e-8)
     plot(x, 0,'r*')
